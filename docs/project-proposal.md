@@ -76,3 +76,45 @@ precision-recall curves, a confusion matrix, and a table of errors by condition.
 Feedback from a computer-science teacher can support implementation, while a
 lifeguard or coastal-safety professional can review whether annotations are
 plausible.
+
+## Young Scientist 2027 implementation and submission timeline
+
+The following schedule is a planning baseline for a student working from
+September 2026 through a spring 2027 submission. The competition's official
+rules and the student's school deadline take precedence.
+
+| Phase | Dates | Deliverables |
+|---|---|---|
+| Question and ethics | Sep 7–27, 2026 | Approved question, hypothesis, bibliography, mentor, safety statement, and list of permitted sources. |
+| Pilot and label design | Sep 28–Oct 25 | 50-image audit, annotation guide, label examples, provenance manifest, and 20-image practice set. |
+| Dataset construction | Oct 26–Dec 20 | 1,000–1,500 images where feasible, reviewed annotations, duplicate check, license evidence, and frozen 70/20/10 split. |
+| Baseline training | Dec 21–Jan 17 | Reproducible baseline run, saved configuration, random seed, package versions, learning curves, and checkpoint metadata. |
+| Comparison study | Jan 18–Feb 14 | One pre-declared comparison or ablation and a model-selection rule based only on training/validation data. |
+| Locked evaluation | Feb 15–28 | One final test evaluation with mAP@0.5, precision, recall, false positives per image, confusion matrix, and error gallery. |
+| Interpretation | Mar 1–14 | Condition-stratified analysis, limitation statement, domain review, and conclusion about the hypothesis. |
+| Paper and poster | Mar 15–31 | Abstract, paper, figures, references, poster/slides, code instructions, data statement, and safety disclosure. |
+| Submission and defense | Apr 1–official deadline | Required forms and files uploaded, receipt archived, and a short oral explanation rehearsed. |
+
+### Weekly student workflow
+
+Reserve two short sessions each week: one for research or annotation and one
+for coding, analysis, or writing. End each week by recording what changed,
+which data or code version was used, what failed, and the next decision. Keep
+the test set inaccessible during model development. Back up the manifest,
+experiment log, and final figures in two locations.
+
+### Decision gates
+
+- **End of October:** stop collecting a source if its license or provenance
+  cannot be verified.
+- **End of December:** if fewer than 1,000 usable images are available, adopt
+  the minimum viable pilot path and state that limitation.
+- **Before test evaluation:** write the model-selection rule and freeze the
+  test manifest.
+- **After test evaluation:** report the actual result, including a miss of the
+  80% target; never retune against the test set.
+- **Before submission:** have a teacher or mentor check citations, licensing,
+  safety language, and that every conclusion is supported by a recorded metric.
+
+The project is successful as student research if the process is reproducible and
+the conclusion is honest, whether or not the model reaches the target metric.

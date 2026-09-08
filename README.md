@@ -124,6 +124,64 @@ shoreline geometry, or sediment that is not a rip current.
 7. **Present results:** show raw images beside annotated predictions and explain
    that the prototype is informational only.
 
+## Expanded scope for Young Scientist 2027
+
+The project is designed as a complete student research study rather than only a
+model-training exercise. The expanded scope includes:
+
+- a literature review that defines the visual and oceanographic basis for a
+  rip-current label;
+- a documented, license-safe dataset and annotation quality process;
+- a reproducible baseline detector plus one comparison or ablation;
+- an error and bias analysis that tests whether the model learned beach
+  appearance instead of current behavior;
+- a small offline demonstration that overlays predictions on saved images;
+- a research paper, poster, source list, experiment log, and disclosure of
+  limitations suitable for a school or Young Scientist submission.
+
+The student should narrow the claim if time or data is limited. A valid result
+can be that the baseline does not reach 80% mAP, provided the test split was
+locked, the metrics are reported honestly, and the failure modes explain what
+should improve next.
+
+## Student timeline and submission plan
+
+This schedule assumes work begins in **September 2026** and the local Young
+Scientist 2027 deadline is during spring 2027. The official competition,
+school, consent, formatting, and upload deadlines must override these
+planning dates; check them with a teacher before relying on the schedule.
+
+| Dates | Student deliverable | Exit check |
+|---|---|---|
+| Sep 7–27, 2026 | Confirm the research question, safety boundaries, mentor/teacher, judging rubric, and permitted data sources. Build the bibliography and research log. | One-page proposal approved; every source has a citation and license note. |
+| Sep 28–Oct 25 | Collect and audit the 50-image pilot. Write the manifest, remove unusable sources, define positive/negative/review labels, and practice annotation on 20 images. | At least 20 reviewed pilot labels and a written annotation guide. |
+| Oct 26–Nov 22 | Expand toward 300–500 images. Annotate in batches, run duplicate/near-duplicate checks, and ask a domain reviewer to audit a sample. | Pilot quality review complete; no known train/test leakage. |
+| Nov 23–Dec 20 | Reach the 1,000–1,500-image target if feasible. Freeze provenance, create the 70/20/10 split, and lock the test manifest. | Dataset version 1.0 and immutable test list recorded in the log. |
+| Dec 21, 2026–Jan 17, 2027 | Prepare the environment and train the first baseline. Save configuration, seed, package versions, checkpoints, and learning curves. | A repeatable baseline run can be reproduced from the run log. |
+| Jan 18–Feb 14 | Tune only against training/validation data. Run one comparison or ablation, such as augmentation on/off or small versus medium model. | Model selection rule written before opening the test results. |
+| Feb 15–28 | Evaluate the selected model once on the locked test set. Produce mAP, precision, recall, confusion matrix, false-positive examples, and condition breakdowns. | Results table and representative successes/failures exported. |
+| Mar 1–14 | Interpret findings, interview or consult a qualified reviewer if available, document limitations, and decide whether the 80% target was met. | Claims match evidence; no operational safety claim is made. |
+| Mar 15–31 | Write the paper and build the poster: question, hypothesis, methods, ethics, results, limitations, conclusion, and references. Recreate all figures from saved outputs. | Teacher/mentor review completed; citations and image licenses checked. |
+| Apr 1–deadline | Submit the required forms, paper, poster, code link, data statement, and any school approval documents. Practice a three-minute explanation and judge questions. | Submission receipt saved; final archive is read-only and reproducible. |
+
+### Minimum viable path
+
+If the full dataset or 80% target is not achievable, submit a smaller but
+rigorous pilot study: 300–500 carefully audited images, a baseline model, a
+locked test set, and a transparent analysis of why more data or better labels
+are needed. Do not change the test split or threshold after seeing the result.
+
+### Final submission package
+
+Keep these artifacts together in a dated release or archive:
+
+1. research paper and one-page abstract;
+2. poster or presentation slides with raw/predicted image pairs;
+3. source manifest, license notes, annotation guide, and split manifests;
+4. training configuration, evaluation metrics, plots, and error gallery;
+5. code and environment instructions;
+6. experiment log, safety statement, limitations, and contributor/mentor notes.
+
 ## Repository layout
 
 ```text
@@ -131,7 +189,8 @@ shoreline geometry, or sediment that is not a rip current.
 ├── data/
 │   └── README.md                 # provenance, storage, and split rules
 ├── docs/
-│   └── project-proposal.md       # entry-form-ready research narrative
+│   ├── project-proposal.md       # entry-form-ready research narrative
+│   └── timeline.md               # student schedule and submission checklist
 ├── src/
 │   └── README.md                 # planned training and inference modules
 ├── README.md
