@@ -225,6 +225,28 @@ Keep these artifacts together in a dated release or archive:
 The scaffold intentionally does not include images, credentials, scraped
 content, or unverified model weights.
 
+## First working slice
+
+The `src/` tools provide a small, offline, reproducible workflow without a
+training-framework dependency. From the repository root:
+
+```powershell
+python src/prepare_dataset.py data/manifests/images.csv --output data/manifests/splits --seed 42
+python src/evaluate.py --labels data/labels --predictions runs/predictions --output runs/metrics.json --csv-output runs/metrics.csv
+```
+
+The preparation command validates image and YOLO label paths, normalized boxes,
+duplicate image hashes, and sequence leakage before writing deterministic
+70/20/10 manifests. Evaluation reports precision, recall, confusion counts, and
+an IoU-based AP@0.5 approximation. See [`src/README.md`](src/README.md) for
+the exact manifest and prediction formats.
+
+Inference is optional and strictly local: install and review an approved
+backend, provide a model file, and run `src/infer.py`. The command fails rather
+than fabricating output when the backend or model is missing. This prototype is
+for education and research only, not for directing swimmers, lifeguards, or
+emergency responses; follow posted warnings and local lifeguard guidance.
+
 ## Work completed and next steps
 
 The initial work is a literature review and a pilot batch of about 50
