@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Create virtual environment
+        run: python -m venv .venv
+
+      - name: Run standard-library checks
+        shell: bash
+        run: |
+          source .venv/bin/activate
+          python -m unittest discover -s tests -p 'test_*.py'
+          python -m compileall -q src tests
+
+      - name: Run deterministic offline simulation
+        shell: bash
+        run: |
+          source .venv/bin/activate
+          python - <<'PY'
+          import csv
+          import tempfile
+          from pathlib import Path
+
+          from src.evaluate import evaluate_records
+          from src.prepare_dataset import read_manifest, split_rows, validate_rows, write_split_files
+
+          with tempfile.TemporaryDirectory() as directory:
+              root = Path(directory)
+              manifest = root / "manifest.csv"
+              fields = ["image_id", "image_path", "label_path", "sequence_id", "label_status"]
+              rows = []
+              for index in range(6):
+                  image_name = f"image-{index}.jpg"
+                  label_name = f"image-{index}.txt"
+                  (root / image_name).write_bytes(f"image-{index}".encode())
+                  (root / label_name).write_text("0 0.5 0.5 0.2 0.2\n", encoding="utf-8")
+                  rows.append({
+                      "image_id": f"image-{index}",
+                      "image_path": image_name,
+                      "label_path": label_name,
+                      "sequence_id": f"sequence-{index // 2}",
+                      "label_status": "positive",
+                  })
+              with manifest.open("w", newline="", encoding="utf-8") as handle:
+                  writer = csv.DictWriter(handle, fieldnames=fields)
+                  writer.writeheader()
+                  writer.writerows(rows)
+
+              loaded = read_manifest(manifest)
+              assert validate_rows(loaded, manifest) == []
+              first = split_rows([row.copy() for row in loaded], seed=42)
+              second = split_rows([row.copy() for row in loaded], seed=42)
+              assert first == second
+              assert sum(len(values) for values in first.values()) == len(loaded)
+              assert len({
+                  row["sequence_id"]: split
+                  for split, values in first.items()
+                  for row in values
+              }) == 3
+              write_split_files(first, root / "splits")
+              assert all((root / "splits" / f"{split}.csv").is_file() for split in ("train", "val", "test"))
+
+              box = (0.4, 0.4, 0.6, 0.6, 0.9)
+              metrics = evaluate_records([([box], [box]), ([], [box])])
+              assert metrics["true_positive"] == 1
+              assert metrics["false_negative"] == 1
+              assert metrics["precision"] == 1.0
+              assert metrics["recall"] == 0.5
+          PY
