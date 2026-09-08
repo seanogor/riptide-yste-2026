@@ -79,21 +79,40 @@ plausible.
 
 ## Young Scientist 2027 implementation and submission timeline
 
-The following schedule is a planning baseline for a student working from
-September 2026 through a spring 2027 submission. The competition's official
-rules and the student's school deadline take precedence.
+The following schedule follows the supplied **Stripe Young Scientist &
+Technology Exhibition 2027 (YSTE)** handbook. The exhibition is at RDS Dublin
+from **6–9 January 2027**. The handbook's official deadlines take precedence.
 
 | Phase | Dates | Deliverables |
 |---|---|---|
-| Question and ethics | Sep 7–27, 2026 | Approved question, hypothesis, bibliography, mentor, safety statement, and list of permitted sources. |
-| Pilot and label design | Sep 28–Oct 25 | 50-image audit, annotation guide, label examples, provenance manifest, and 20-image practice set. |
-| Dataset construction | Oct 26–Dec 20 | 1,000–1,500 images where feasible, reviewed annotations, duplicate check, license evidence, and frozen 70/20/10 split. |
-| Baseline training | Dec 21–Jan 17 | Reproducible baseline run, saved configuration, random seed, package versions, learning curves, and checkpoint metadata. |
-| Comparison study | Jan 18–Feb 14 | One pre-declared comparison or ablation and a model-selection rule based only on training/validation data. |
-| Locked evaluation | Feb 15–28 | One final test evaluation with mAP@0.5, precision, recall, false positives per image, confusion matrix, and error gallery. |
-| Interpretation | Mar 1–14 | Condition-stratified analysis, limitation statement, domain review, and conclusion about the hypothesis. |
-| Paper and poster | Mar 15–31 | Abstract, paper, figures, references, poster/slides, code instructions, data statement, and safety disclosure. |
-| Submission and defense | Apr 1–official deadline | Required forms and files uploaded, receipt archived, and a short oral explanation rehearsed. |
+| Student entry | Sep 7–25, 2026 | Title (maximum 100 characters), project details, one-page proposal (maximum 500 words), online student application, and entry fee submitted by **25 Sep, 5:00 pm**. |
+| Teacher assessment | Sep 26–28 | Teacher confirms category and age group and submits assessment by **28 Sep, 5:00 pm**. |
+| Pilot and label design | Sep 29–Oct 22 | 50-image audit, annotation guide, label examples, provenance manifest, and 20-image practice set. |
+| Screening and acceptance | Oct 23–Nov 5 | Check results by **23 Oct**; if qualified, return the signed confirmation card by **5 Nov**. |
+| Dataset construction | Nov 6–Dec 4 | 1,000–1,500 images where feasible, reviewed annotations, duplicate check, licence evidence, and frozen 70/20/10 split. |
+| Video submission | Dec 5–11 | Record a clear video under three minutes and upload it by **11 Dec** in an accepted format. |
+| Baseline, report, and display | Dec 12–Jan 2, 2027 | Reproducible runs, locked evaluation, report book, project diary, landscape display, references, and safety disclosure. |
+| Exhibition preparation | Jan 3–5 | Email the report-book PDF to `projectbook@yste.ie` with the stand number as subject before **6 Jan, 12:00 pm**; print two copies and pack the diary/display. |
+| Exhibition | Jan 6–9 | Set up by **6 Jan, 12:00 pm**; judging runs 6 Jan 3–6 pm, 7 Jan 9 am–1 pm and 2–6 pm, and 8 Jan 9 am–12 pm if needed. |
+
+### Required YSTE artifacts
+
+The handbook requires four exhibition elements:
+
+1. **Project report book:** title page, contents, one-page abstract,
+   introduction, literature review, methodology, results, discussion,
+   conclusion, references, and appendices. The main body excluding references
+   and appendices must not exceed 50 pages. Email a PDF and bring two printed
+   copies.
+2. **Project diary:** record the idea, planning, investigation, results,
+   problems solved, learning, exhibition preparation, conclusion, and
+   supporting references.
+3. **Three-minute video:** keep it under three minutes, explain the goal,
+   methods, and findings clearly, use good audio and visuals, and submit without
+   music by 11 December 2026.
+4. **Visual display:** use a landscape layout and keep materials inside the
+   1,189 mm x 841 mm back panel and 1,200 mm x 600 mm worktop. Include concise
+   question, method, results, discussion, references, and safety wording.
 
 ### Weekly student workflow
 
@@ -103,9 +122,18 @@ which data or code version was used, what failed, and the next decision. Keep
 the test set inaccessible during model development. Back up the manifest,
 experiment log, and final figures in two locations.
 
-### Decision gates
+### Decision gates and submission actions
 
-- **End of October:** stop collecting a source if its license or provenance
+- **Before 25 September:** proofread the title and one-page proposal, submit
+  the student entry by 5:00 pm, and confirm the teacher's 28 September
+  assessment.
+- **By 23 October:** check the screening outcome. If qualified, collect the
+  required signatures and return the confirmation card by 5 November.
+- **By 11 December:** finish and upload the under-three-minute video.
+- **By 6 January at noon:** email the report book PDF with the stand number,
+  bring two printed copies, and prepare the diary and display for setup.
+
+- **End of October:** stop collecting a source if its licence or provenance
   cannot be verified.
 - **End of December:** if fewer than 1,000 usable images are available, adopt
   the minimum viable pilot path and state that limitation.
@@ -113,8 +141,9 @@ experiment log, and final figures in two locations.
   test manifest.
 - **After test evaluation:** report the actual result, including a miss of the
   80% target; never retune against the test set.
-- **Before submission:** have a teacher or mentor check citations, licensing,
-  safety language, and that every conclusion is supported by a recorded metric.
+- **Before the exhibition:** have a teacher or mentor check citations,
+  licensing, safety language, report-page count, video length, display
+  dimensions, and that every conclusion is supported by a recorded metric.
 
 The project is successful as student research if the process is reproducible and
 the conclusion is honest, whether or not the model reaches the target metric.

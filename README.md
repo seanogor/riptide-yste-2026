@@ -146,10 +146,10 @@ should improve next.
 
 ## Student timeline and submission plan
 
-This schedule assumes work begins in **September 2026** and the local Young
-Scientist 2027 deadline is during spring 2027. The official competition,
-school, consent, formatting, and upload deadlines must override these
-planning dates; check them with a teacher before relying on the schedule.
+This schedule follows the **Stripe Young Scientist & Technology Exhibition
+2027 (YSTE)** handbook supplied with this project. The exhibition runs
+**6–9 January 2027 at the RDS Dublin**. The handbook's official deadlines
+override any older planning dates below.
 
 | Dates | Student deliverable | Exit check |
 |---|---|---|
@@ -163,6 +163,31 @@ planning dates; check them with a teacher before relying on the schedule.
 | Mar 1–14 | Interpret findings, interview or consult a qualified reviewer if available, document limitations, and decide whether the 80% target was met. | Claims match evidence; no operational safety claim is made. |
 | Mar 15–31 | Write the paper and build the poster: question, hypothesis, methods, ethics, results, limitations, conclusion, and references. Recreate all figures from saved outputs. | Teacher/mentor review completed; citations and image licenses checked. |
 | Apr 1–deadline | Submit the required forms, paper, poster, code link, data statement, and any school approval documents. Practice a three-minute explanation and judge questions. | Submission receipt saved; final archive is read-only and reproducible. |
+
+### Handbook deadlines and exhibition actions
+
+Use these fixed YSTE 2027 dates instead of the generic planning rows above:
+
+- **25 September 2026, 5:00 pm:** student entry, project details, one-page
+  proposal (maximum 500 words), and entry fee due.
+- **28 September, 5:00 pm:** teacher assessment due.
+- **23 October:** screening result available; **5 November:** signed confirmation
+  card due if qualified.
+- **11 December:** three-minute video due. Keep it under three minutes, use clear
+  audio and visuals, and do not add music.
+- **6 January 2027, 12:00 pm:** email the report-book PDF to
+  `projectbook@yste.ie` with the stand number as the subject, bring two printed
+  copies, and set up the diary, report book, and landscape display at the RDS.
+- **6–8 January:** judging takes place; **9 January** is the final exhibition
+  day. Keep the display within the handbook's 1,189 mm x 841 mm back panel and
+  1,200 mm x 600 mm worktop.
+
+The report book should include the handbook's title page, contents, one-page
+abstract, introduction, literature review, methodology, results, discussion,
+conclusion, references, and appendices. Its main body must be no more than 50
+pages, excluding references and appendices. The project diary should document
+planning, investigation, results, problems, learning, and exhibition
+preparation.
 
 ### Minimum viable path
 
