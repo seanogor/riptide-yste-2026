@@ -92,8 +92,8 @@ from **6–9 January 2027**. The handbook's official deadlines take precedence.
 | Dataset construction | Nov 6–Dec 4 | 1,000–1,500 images where feasible, reviewed annotations, duplicate check, licence evidence, and frozen 70/20/10 split. |
 | Video submission | Dec 5–11 | Record a clear video under three minutes and upload it by **11 Dec** in an accepted format. |
 | Baseline, report, and display | Dec 12–Jan 2, 2027 | Reproducible runs, locked evaluation, report book, project diary, landscape display, references, and safety disclosure. |
-| Exhibition preparation | Jan 3–5 | Email the report-book PDF to `projectbook@yste.ie` with the stand number as subject before **6 Jan, 12:00 pm**; print two copies and pack the diary/display. |
-| Exhibition | Jan 6–9 | Set up by **6 Jan, 12:00 pm**; judging runs 6 Jan 3–6 pm, 7 Jan 9 am–1 pm and 2–6 pm, and 8 Jan 9 am–12 pm if needed. |
+| Exhibition preparation | Jan 3–5 | Email the report-book PDF to `projectbook@yste.ie` with the stand number as subject before **6 Jan 2027, 12:00 pm**; print two copies and pack the diary/display. |
+| Exhibition | Jan 6–9, 2027 | Set up at the RDS Dublin by **6 Jan, 12:00 pm**; judging runs 6 Jan 3–6 pm, 7 Jan 9 am–1 pm and 2–6 pm, and 8 Jan 9 am–12 pm if needed. |
 
 ### Required YSTE artifacts
 

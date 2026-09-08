@@ -69,18 +69,18 @@ These dates are taken from the supplied Stripe YSTE 2027 handbook.
 - [ ] Design a landscape display within 1,189 mm x 841 mm back-panel and
       1,200 mm x 600 mm worktop limits.
 
-## 3–6 January — send the report and set up
+## 3–5 January — finalise the report and display
 
 - [ ] Run one pre-declared comparison or ablation using validation data only.
 - [ ] Select the final model without opening the test labels.
 - [ ] Evaluate once on the locked test set.
 - [ ] Export mAP@0.5, precision, recall, false positives per image, confusion
       matrix, and examples of successes and failures.
-- [ ] Email the report-book PDF to `projectbook@yste.ie` before **6 January,
-      12:00 pm**, using the stand number as the subject.
+- [ ] Prepare the report-book PDF for email to `projectbook@yste.ie` before
+      **6 January 2027, 12:00 pm**, using the stand number as the subject.
 - [ ] Print two report-book copies and pack the diary and display.
 
-## 6–9 January — exhibition
+## 6–9 January 2027 — exhibition at the RDS Dublin
 
 - [ ] Analyze errors by weather, lighting, geography, camera angle, and surf
       state.
@@ -88,11 +88,11 @@ These dates are taken from the supplied Stripe YSTE 2027 handbook.
 - [ ] Write methods, results, limitations, ethics, and conclusion.
 - [ ] Build the poster or slides with raw/predicted image pairs.
 - [ ] Have a teacher or mentor review citations, licensing, and claims.
-- [ ] Set up the diary, one report-book copy, and display at the RDS by **6
-      January, 12:00 pm**, before Round 1 judging (3:00–6:00 pm).
-- [ ] Prepare for Round 2 on **7 January, 9:00 am–1:00 pm**, Round 3 on
-      **7 January, 2:00–6:00 pm**, and Round 4 if needed on **8 January,
-      9:00 am–12:00 pm**.
+- [ ] Email the report-book PDF before **6 January, 12:00 pm**, then set up
+      the diary, one report-book copy, and display at the RDS by that time.
+- [ ] Prepare for judging on **6 January, 3:00–6:00 pm**; **7 January,
+      9:00 am–1:00 pm and 2:00–6:00 pm**; and **8 January, 9:00 am–12:00
+      pm if needed**.
 - [ ] Save the submission receipt, final archive, and judging notes.
 - [ ] Practice a three-minute explanation and answers about false positives,
       dataset bias, safety, and limitations.

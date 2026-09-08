@@ -153,16 +153,13 @@ override any older planning dates below.
 
 | Dates | Student deliverable | Exit check |
 |---|---|---|
-| Sep 7–27, 2026 | Confirm the research question, safety boundaries, mentor/teacher, judging rubric, and permitted data sources. Build the bibliography and research log. | One-page proposal approved; every source has a citation and license note. |
-| Sep 28–Oct 25 | Collect and audit the 50-image pilot. Write the manifest, remove unusable sources, define positive/negative/review labels, and practice annotation on 20 images. | At least 20 reviewed pilot labels and a written annotation guide. |
-| Oct 26–Nov 22 | Expand toward 300–500 images. Annotate in batches, run duplicate/near-duplicate checks, and ask a domain reviewer to audit a sample. | Pilot quality review complete; no known train/test leakage. |
-| Nov 23–Dec 20 | Reach the 1,000–1,500-image target if feasible. Freeze provenance, create the 70/20/10 split, and lock the test manifest. | Dataset version 1.0 and immutable test list recorded in the log. |
-| Dec 21, 2026–Jan 17, 2027 | Prepare the environment and train the first baseline. Save configuration, seed, package versions, checkpoints, and learning curves. | A repeatable baseline run can be reproduced from the run log. |
-| Jan 18–Feb 14 | Tune only against training/validation data. Run one comparison or ablation, such as augmentation on/off or small versus medium model. | Model selection rule written before opening the test results. |
-| Feb 15–28 | Evaluate the selected model once on the locked test set. Produce mAP, precision, recall, confusion matrix, false-positive examples, and condition breakdowns. | Results table and representative successes/failures exported. |
-| Mar 1–14 | Interpret findings, interview or consult a qualified reviewer if available, document limitations, and decide whether the 80% target was met. | Claims match evidence; no operational safety claim is made. |
-| Mar 15–31 | Write the paper and build the poster: question, hypothesis, methods, ethics, results, limitations, conclusion, and references. Recreate all figures from saved outputs. | Teacher/mentor review completed; citations and image licenses checked. |
-| Apr 1–deadline | Submit the required forms, paper, poster, code link, data statement, and any school approval documents. Practice a three-minute explanation and judge questions. | Submission receipt saved; final archive is read-only and reproducible. |
+| By 25 Sep 2026, 5:00 pm | Submit the student entry, project details, title (maximum 100 characters), one-page proposal (maximum 500 words), and entry fee. | Entry receipt and approved proposal saved. |
+| 26 Sep–22 Oct | Confirm the research question, safety boundaries, mentor/teacher, judging rubric, permitted data sources, and pilot annotation process. | Teacher assessment is submitted by 28 Sep, 5:00 pm; pilot guide and research log are ready. |
+| 23 Oct–5 Nov | Check the screening result and, if qualified, complete the signed confirmation card. Continue the audited pilot and dataset construction. | Screening result checked by 23 Oct; confirmation card returned by 5 Nov. |
+| 6 Nov–4 Dec | Build and review the dataset, freeze provenance, create the 70/20/10 split, and lock the test manifest. | Dataset version and immutable test list are recorded. |
+| 5–11 Dec | Record and submit the clear, under-three-minute video without music. | Accepted video is uploaded by 11 Dec. |
+| 12 Dec 2026–5 Jan 2027 | Train and evaluate the documented baseline, write the report book and diary, and prepare the landscape display. | Report main body is no more than 50 pages; final archive, diary, and display are ready. |
+| 6–9 Jan 2027 | Email the report-book PDF before noon, set up at the RDS Dublin, and present during the scheduled judging rounds. | Submission receipt and judging notes are saved. |
 
 ### Handbook deadlines and exhibition actions
 
@@ -175,12 +172,14 @@ Use these fixed YSTE 2027 dates instead of the generic planning rows above:
   card due if qualified.
 - **11 December:** three-minute video due. Keep it under three minutes, use clear
   audio and visuals, and do not add music.
-- **6 January 2027, 12:00 pm:** email the report-book PDF to
+- **Before 6 January 2027, 12:00 pm:** email the report-book PDF to
   `projectbook@yste.ie` with the stand number as the subject, bring two printed
-  copies, and set up the diary, report book, and landscape display at the RDS.
-- **6–8 January:** judging takes place; **9 January** is the final exhibition
-  day. Keep the display within the handbook's 1,189 mm x 841 mm back panel and
-  1,200 mm x 600 mm worktop.
+  copies, and set up the diary, report book, and landscape display at the RDS
+  by noon on 6 January.
+- **6–9 January 2027:** the exhibition runs at the RDS Dublin. Judging is
+  **6 January, 3:00–6:00 pm; 7 January, 9:00 am–1:00 pm and 2:00–6:00 pm;
+  and 8 January, 9:00 am–12:00 pm if needed**. Keep the display within the
+  handbook's 1,189 mm x 841 mm back panel and 1,200 mm x 600 mm worktop.
 
 The report book should include the handbook's title page, contents, one-page
 abstract, introduction, literature review, methodology, results, discussion,
