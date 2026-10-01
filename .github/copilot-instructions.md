@@ -16,6 +16,8 @@
   they show a rip current. Assess only images the student supplies or images
   already included in the project dataset, and describe visual evidence and
   uncertainty rather than claiming certainty from an image alone.
+- Do not treat the assistant's historical image assessments or student coaching
+  corrections as independently verified ground truth or detector data.
 - Use only images whose public-domain, Creative Commons, or other open-access
   reuse terms have been verified. Record source URL, licence, capture date when
   available, coarse region, camera type, and sequence ID.
