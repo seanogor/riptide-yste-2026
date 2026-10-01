@@ -20,10 +20,20 @@ local emergency guidance.
 
 ## Why this matters
 
-Rip currents are a major beach-safety hazard. They generally pull swimmers away
-from shore rather than under the surface, but a swimmer who fights the current
-can become exhausted quickly. Earlier visual awareness can support safer decisions
-and help researchers study where conditions change.
+Rip currents are a major beach-safety hazard. They are narrow channels or
+currents in the surf zone that move quickly away from shore, often in surf
+conditions where the water appears calm in one place while waves continue to break
+nearby. A typical rip current may be roughly 15–30 m wide (about 50–100 ft),
+can extend tens of metres offshore, and can move at speeds around 8 km/h or
+more—fast enough to overwhelm a swimmer who tries to fight it. They can form
+when water is only a few feet deep and often appear at breaks or channels in a
+sandbar.
+
+These features are important for the project because they can be visually
+recognised from elevated beach views, especially where waves are not breaking,
+foam or seaweed is moving offshore, or discoloured water indicates a strong
+offshore flow. They are often easiest to spot from high viewpoints such as dunes,
+headlands, beaches with good elevation, or lifeguard towers.
 
 The project focuses on software and public imagery, which is safer and more
 accessible than deploying physical sensors in rough surf.
@@ -248,13 +258,20 @@ emergency responses; follow posted warnings and local lifeguard guidance.
 
 ## Work completed and next steps
 
-The initial work is a literature review and a pilot batch of about 50
-open-source beach images. That pilot confirmed that resolution and annotation
-time are practical constraints, so the plan includes data augmentation and a
-staged annotation review.
+Earlier project notes report a preliminary literature review and a pilot batch
+of about 50 open-source beach images. The image files and source manifest were
+not recovered into this checkout, so that count and the image licences still
+need to be confirmed before being reported as completed research. The earlier
+notes identify resolution and annotation time as practical constraints.
 
 Next, create the source manifest, resolve image licenses, annotate the pilot
 set, and establish a leakage-free split before selecting a model.
+
+The guided image-review process is documented in
+[`docs/assistant-training-protocol.md`](docs/assistant-training-protocol.md).
+Historical student corrections are recorded in
+[`data/training_log.csv`](data/training_log.csv); they are coaching notes, not
+verified labels or detector-training data.
 
 ## Safety and ethics
 
