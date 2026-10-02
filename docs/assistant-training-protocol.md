@@ -65,9 +65,12 @@ The conversation history preserves nine student-labelled examples:
 - For `rip-current9-example.jpg`, the assistant first assessed the attached
   image as ambiguous, leaning positive at about 60%, based on a foamy,
   discoloured plume and a gap in the breaking-wave line. The student labelled
-  it positive after seeing that assessment. No further explanation was
-  supplied, so no additional criterion is inferred. Its source and reuse
-  licence are unverified.
+  it positive after seeing that assessment and explained that when those visual
+  signs recur, the project criteria should label the image positive. Record
+  this as the student's project heuristic: a foamy/discoloured offshore-plume
+  appearance together with a gap in the breaking-wave pattern supports a
+  positive image label. It is not independent proof that water is moving
+  offshore. The image source and reuse licence are unverified.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
