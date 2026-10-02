@@ -36,7 +36,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves ten student-labelled examples:
+The conversation history preserves eleven student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -77,13 +77,18 @@ The conversation history preserves ten student-labelled examples:
   or offshore plume. The student confirmed it was normal water activity with
   no visible signs of a rip current. This is a student coaching example, not
   independent oceanographic ground truth.
+- For `rip-current11-example.jpg`, the assistant assessed the image as negative
+  with about 75% confidence. It showed a shore-parallel breaking wave and foam
+  around wave collapse and swash, without a distinct narrow offshore channel,
+  breaker gap, or offshore plume. The student labelled it negative after seeing
+  the assessment. Its source and reuse licence were not provided.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
 the repository and its provenance and licence have not been verified. The
-ninth and tenth images were attached in chat, but they and the eighth image
+ninth, tenth, and eleventh images were attached in chat, but they and the eighth image
 are not committed because their reuse licences have not been verified. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
