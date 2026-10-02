@@ -21,9 +21,26 @@ The project will use NOAA oceanographic and coastal-safety material, United
 States Lifesaving Association guidance and statistics, and peer-reviewed
 computer-vision literature on object detection and optical-flow methods.
 
+Rip currents are narrow, fast-moving channels in the surf zone that carry water
+away from shore. They are often roughly 50–100 ft wide and may extend out to
+about 100 yards offshore. Speed can reach roughly 8 km/h, which is faster than
+an Olympic swimmer can sustain against the current. They can form even in good
+weather, often after storms, and are often strongest around low tide, though they
+can appear at any time. They commonly form where sandbars are close to shore,
+particularly at breaks or channels in the bar.
+
 The working hypothesis is that rip currents have recurring visual profiles that
 can be learned from labeled imagery, but the model may confuse ordinary wave
 gaps, glare, shadows, sediment, and shoreline structures with a current.
+
+Common visual clues include:
+
+- gaps in breaking waves where the surf line is interrupted;
+- foam, seaweed, or discoloured water moving offshore;
+- a narrow channel cutting through the sandbar;
+- water that looks calmer or darker than surrounding surf;
+- elevated viewpoints such as dunes, headlands, beach access points, or lifeguard
+towers that make the current easier to see.
 
 ## Methods
 
@@ -51,10 +68,13 @@ No physical sensors, boats, or field deployment are required.
 
 ## Work completed
 
-A preliminary literature review and a pilot batch of approximately 50 open-source
-beach images have been collected. The pilot showed that image resolution affects
-visual clarity and that manual annotation is time-consuming. The plan therefore
-includes augmentation, staged review, and a documented provenance manifest.
+Earlier project notes report a preliminary literature review and a pilot batch
+of approximately 50 open-source beach images. The image files and source
+manifest were not recovered into this checkout, so the count and image licences
+remain to be confirmed before this can be reported as completed research. The
+notes identify image resolution and annotation time as practical constraints;
+the plan therefore includes staged annotation review and a documented
+provenance manifest.
 
 ## Limitations and risk controls
 

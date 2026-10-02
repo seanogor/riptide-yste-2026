@@ -30,6 +30,7 @@ selection begins.
 ```text
 data/
 ├── manifests/
+│   ├── images-template.csv
 │   ├── images.csv
 │   ├── train.txt
 │   ├── val.txt
@@ -37,6 +38,23 @@ data/
 └── labels/
     └── <image_id>.txt
 ```
+
+Use `images-template.csv` as the starter template before collecting or curating
+real sources. It contains only the column headings; do not treat fabricated
+example URLs, licences, labels, or split assignments as data.
+
+`training_log.csv` records the assistant's historical image assessments and
+student corrections. It is a project learning record, not a verified image
+dataset or ground truth. The original images were not recovered into this
+repository, so these records must not be used for detector training or evaluation.
+
+## Assistant image-training protocol
+
+During guided image review, analyse only images supplied by the student or
+already present in the project dataset. Do not search the web, open the image's
+source page, reverse-search it, or consult external labels to decide whether it
+shows a rip current. Follow `docs/assistant-training-protocol.md` for the
+assessment format, correction loop, and uncertainty rules.
 
 YOLO label files contain one normalized row per box:
 
