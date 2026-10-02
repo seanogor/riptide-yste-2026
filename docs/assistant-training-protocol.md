@@ -56,11 +56,12 @@ The conversation history preserves seven student-labelled examples:
 - For `rip-current 8-example.jpg`, the student supplied a positive label before
   attaching the image, then later confirmed the assistant's moderate-confidence
   positive visual assessment. The assessment noted a dark channel-like region
-  interrupting breaking waves and foam along its margins. Because the label was
-  known first, this is not a blind test or an independent evaluation example.
-  No further explanation was supplied, so no additional rule is inferred. The
-  student supplied a WHOI source URL, but the image's reuse licence has not been
-  verified.
+  interrupting breaking waves and foam along its margins. The student explained
+  that discolouration and a break in the bar are visible cues. For this
+  student-labelled example, those cues support the positive assessment.
+  Because the label was known first, this is not a blind test or an independent
+  evaluation example. The student supplied a WHOI source URL, but the image's
+  reuse licence has not been verified.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
