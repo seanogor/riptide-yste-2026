@@ -36,8 +36,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves six corrected examples and one later
-assessment awaiting student feedback:
+The conversation history preserves seven corrected examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -51,14 +50,15 @@ assessment awaiting student feedback:
   bar break.
 - A later positive correction also noted there was no visible break in the
   bank/bar.
-- A further image received a moderate-confidence positive assessment, but no
-  student correction was found. It remains unlabelled in the log and must not
-  be counted as a corrected example.
+- A later image was assessed as a moderate-confidence positive and the student
+  subsequently labelled it positive. No explanation for that correction was
+  supplied, so no additional rule is inferred.
 
 These are student coaching examples, not independently verified
-oceanographic ground truth. The original images for the six corrected examples
-were not recovered into this repository. One later attachment remains outside
-the repository, but its provenance and licence have not been verified. See
+oceanographic ground truth. The original images for these corrected examples
+were not recovered into this repository. The seventh image was identified by
+the student as `rip-current 7-example.jpg`, but its attachment remains outside
+the repository and its provenance and licence have not been verified. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
