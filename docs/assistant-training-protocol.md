@@ -34,9 +34,9 @@ the assistant identifies an image as positive—including "ambiguous, leaning
 positive"—and the student agrees that the positive assessment is correct.
 Record the assistant's uncertainty and the student's agreement separately.
 This is a coaching criterion for the exercise, not a measure of model
-performance or independent scientific validation. By this criterion, image 13
-was a pass: the assistant assessed it as ambiguous, leaning positive, and the
-student confirmed it was positive.
+performance or independent scientific validation. By this criterion, images
+13 and 14 were passes: for each, the assistant assessed it as ambiguous,
+leaning positive, and the student confirmed it was positive.
 
 ## After the student gives a correction
 
@@ -47,7 +47,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves thirteen student-labelled examples:
+The conversation history preserves fourteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -106,13 +106,20 @@ The conversation history preserves thirteen student-labelled examples:
   This reinforces the student-taught criterion that discolouration can support
   a positive label even without a visible bar break. It remains an image-review
   heuristic, not proof of offshore flow from a still image.
+- For `rip current 14-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 58%, based on a darker channel-like
+  patch between breaking-surf bands with foam around it. The student labelled
+  it positive after the assessment, meeting the student's coaching pass
+  criterion. The rocky coastline and oblique wave pattern are possible
+  lookalikes; no additional student explanation was supplied. This is not
+  independent validation.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
 the repository and its provenance and licence have not been verified. The
-eighth through thirteenth images were attached in chat, but are not committed
+eighth through fourteenth images were attached in chat, but are not committed
 because their reuse licences have not been verified. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
