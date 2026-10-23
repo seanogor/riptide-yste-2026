@@ -36,7 +36,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves twelve student-labelled examples:
+The conversation history preserves thirteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -88,13 +88,20 @@ The conversation history preserves twelve student-labelled examples:
   breaker gap, or offshore plume. The student labelled it negative after seeing
   the assessment. This is a visual annotation, not proof that no current is
   present; its source and reuse licence were not provided.
+- For `Rip-currents 13-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 60%, based on a dark channel-like
+  foreground area with lighter, foamy margins. The student labelled it positive
+  and explained that there was discolouration but no visible break in the bar.
+  This reinforces the student-taught criterion that discolouration can support
+  a positive label even without a visible bar break. It remains an image-review
+  heuristic, not proof of offshore flow from a still image.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
 the repository and its provenance and licence have not been verified. The
-eighth through twelfth images were attached in chat, but are not committed
+eighth through thirteenth images were attached in chat, but are not committed
 because their reuse licences have not been verified. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
