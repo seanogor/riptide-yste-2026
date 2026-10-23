@@ -47,7 +47,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves fourteen student-labelled examples:
+The conversation history preserves fifteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -113,14 +113,21 @@ The conversation history preserves fourteen student-labelled examples:
   criterion. The rocky coastline and oblique wave pattern are possible
   lookalikes; no additional student explanation was supplied. This is not
   independent validation.
+- For `rip current-15 example.jpg`, the assistant assessed the image as
+  negative at about 75% confidence. It showed shore-parallel small breakers,
+  scattered rocks, and foam along the breaker line without a clear offshore
+  channel, breaker gap, or plume. The student labelled it negative after seeing
+  the assessment. The image has a visible Shutterstock watermark, and its reuse
+  permission was not verified; it is not included in the repository.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
 the repository and its provenance and licence have not been verified. The
-eighth through fourteenth images were attached in chat, but are not committed
-because their reuse licences have not been verified. See
+eighth through fifteenth images were attached in chat, but are not committed
+because their reuse permissions have not been verified. Image 15 also bears a
+visible Shutterstock watermark. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
