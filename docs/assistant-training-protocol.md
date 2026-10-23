@@ -27,6 +27,17 @@ open the image source page, reverse-search the image, consult external
 annotations, or use source metadata to infer the answer. Use only the supplied
 image and the criteria taught by the student.
 
+## Student-defined pass criterion
+
+For this coaching exercise, the student counts an assessment as a pass when
+the assistant identifies an image as positive—including "ambiguous, leaning
+positive"—and the student agrees that the positive assessment is correct.
+Record the assistant's uncertainty and the student's agreement separately.
+This is a coaching criterion for the exercise, not a measure of model
+performance or independent scientific validation. By this criterion, image 13
+was a pass: the assistant assessed it as ambiguous, leaning positive, and the
+student confirmed it was positive.
+
 ## After the student gives a correction
 
 Explain what the initial assessment got right or wrong, identify the clue that
