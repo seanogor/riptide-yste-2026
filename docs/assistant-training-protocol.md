@@ -27,6 +27,17 @@ open the image source page, reverse-search the image, consult external
 annotations, or use source metadata to infer the answer. Use only the supplied
 image and the criteria taught by the student.
 
+## Student-defined pass criterion
+
+For this coaching exercise, the student counts an assessment as a pass when
+the assistant identifies an image as positive—including "ambiguous, leaning
+positive"—and the student agrees that the positive assessment is correct.
+Record the assistant's uncertainty and the student's agreement separately.
+This is a coaching criterion for the exercise, not a measure of model
+performance or independent scientific validation. By this criterion, images
+13 and 14 were passes: for each, the assistant assessed it as ambiguous,
+leaning positive, and the student confirmed it was positive.
+
 ## After the student gives a correction
 
 Explain what the initial assessment got right or wrong, identify the clue that
@@ -36,7 +47,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves twelve student-labelled examples:
+The conversation history preserves fifteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -88,14 +99,35 @@ The conversation history preserves twelve student-labelled examples:
   breaker gap, or offshore plume. The student labelled it negative after seeing
   the assessment. This is a visual annotation, not proof that no current is
   present; its source and reuse licence were not provided.
+- For `Rip-currents 13-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 60%, based on a dark channel-like
+  foreground area with lighter, foamy margins. The student labelled it positive
+  and explained that there was discolouration but no visible break in the bar.
+  This reinforces the student-taught criterion that discolouration can support
+  a positive label even without a visible bar break. It remains an image-review
+  heuristic, not proof of offshore flow from a still image.
+- For `rip current 14-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 58%, based on a darker channel-like
+  patch between breaking-surf bands with foam around it. The student labelled
+  it positive after the assessment, meeting the student's coaching pass
+  criterion. The rocky coastline and oblique wave pattern are possible
+  lookalikes; no additional student explanation was supplied. This is not
+  independent validation.
+- For `rip current-15 example.jpg`, the assistant assessed the image as
+  negative at about 75% confidence. It showed shore-parallel small breakers,
+  scattered rocks, and foam along the breaker line without a clear offshore
+  channel, breaker gap, or plume. The student labelled it negative after seeing
+  the assessment. The image has a visible Shutterstock watermark, and its reuse
+  permission was not verified; it is not included in the repository.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
 the repository and its provenance and licence have not been verified. The
-eighth through twelfth images were attached in chat, but are not committed
-because their reuse licences have not been verified. See
+eighth through fifteenth images were attached in chat, but are not committed
+because their reuse permissions have not been verified. Image 15 also bears a
+visible Shutterstock watermark. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
