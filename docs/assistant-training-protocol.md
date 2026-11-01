@@ -27,6 +27,19 @@ open the image source page, reverse-search the image, consult external
 annotations, or use source metadata to infer the answer. Use only the supplied
 image and the criteria taught by the student.
 
+## Student-defined pass criterion
+
+For this coaching exercise, the student counts an assessment as a pass when
+the assistant identifies an image as positive—including "ambiguous, leaning
+positive"—and the student agrees that the positive assessment is correct.
+Record the assistant's uncertainty and the student's agreement separately.
+This is a coaching criterion for the exercise, not a measure of model
+performance or independent scientific validation. By this criterion, images
+13 and 14 were passes because the assistant assessed them as ambiguous,
+leaning positive, and the student confirmed them as positive. Images 16, 22,
+and 23 were also passes: the assistant assessed them as positive and the
+student agreed.
+
 ## After the student gives a correction
 
 Explain what the initial assessment got right or wrong, identify the clue that
@@ -36,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves twelve student-labelled examples:
+The conversation history preserves forty-two student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -88,14 +101,239 @@ The conversation history preserves twelve student-labelled examples:
   breaker gap, or offshore plume. The student labelled it negative after seeing
   the assessment. This is a visual annotation, not proof that no current is
   present; its source and reuse licence were not provided.
+- For `Rip-currents 13-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 60%, based on a dark channel-like
+  foreground area with lighter, foamy margins. The student labelled it positive
+  and explained that there was discolouration but no visible break in the bar.
+  This reinforces the student-taught criterion that discolouration can support
+  a positive label even without a visible bar break. It remains an image-review
+  heuristic, not proof of offshore flow from a still image.
+- For `rip current 14-example.jpg`, the assistant assessed the image as
+  ambiguous, leaning positive at about 58%, based on a darker channel-like
+  patch between breaking-surf bands with foam around it. The student labelled
+  it positive after the assessment, meeting the student's coaching pass
+  criterion. The rocky coastline and oblique wave pattern are possible
+  lookalikes; no additional student explanation was supplied. This is not
+  independent validation.
+- For `rip current-15 example.jpg`, the assistant assessed the image as
+  negative at about 75% confidence. It showed shore-parallel small breakers,
+  scattered rocks, and foam along the breaker line without a clear offshore
+  channel, breaker gap, or plume. The student labelled it negative after seeing
+  the assessment. The image has a visible Shutterstock watermark, and its reuse
+  permission was not verified; it is not included in the repository.
+- For `rip-current 16-example.jpg official.jpg`, the assistant assessed the
+  image as positive at about 75% confidence. Several darker, narrow-looking
+  channels appeared to interrupt the breaking-wave line and extend seaward,
+  with discoloured water and foam around them. The student labelled it positive
+  after seeing the assessment, meeting the student's coaching pass criterion.
+  The source and reuse licence were not recorded, so the image is not included
+  in the repository; this assessment is not independent validation.
+- For `rip-current 22-example.webp`, the assistant assessed the composite as a
+  positive illustration at about 70% confidence. Schematic panels a and c show
+  arrows indicating offshore flow; panel b contains a turbulent, foamy patch;
+  panel d shows an aerial surf line with a possible gap. The student labelled
+  it positive after seeing the assessment, meeting the coaching pass
+  criterion. Because this is a multi-panel graphic containing diagrams, it is
+  not suitable as a single raw detector-training image or one-box annotation.
+  The source and reuse licence were not recorded.
+- For `rip-current-23 example.webp`, the assistant assessed the image as
+  positive at about 70% confidence. A darker green channel appears to interrupt
+  the breaking-wave line and extend from the beach side toward offshore, with
+  foam and breaking waves on either side. The image is low resolution, so wave
+  timing, depth, and glare are possible lookalikes; a still image cannot prove
+  flow direction. The student labelled it positive after seeing the assessment,
+  meeting the coaching pass criterion. Its source and reuse licence were not
+  recorded.
+- For `rip-current 20-example.jpg n official.jpg`, the assistant assessed the
+  image as ambiguous, leaning negative at about 65%. It showed a sheltered
+  cove with turquoise water and small waves but no clear narrow channel,
+  breaker gap, or offshore plume. The student labelled it negative after seeing
+  the assessment. Water colour may reflect depth, seabed, or lighting, and the
+  still image cannot establish that no current is present. The source and reuse
+  licence were not recorded.
+- For `rip-current 21-example.jpg n official.jpg`, the assistant assessed the
+  image as negative at about 80% confidence. It showed a large shore-parallel
+  breaking wave and broad whitewater, without a distinct narrow offshore
+  channel, breaker gap, or offshore plume. The student labelled it negative
+  after seeing the assessment. A single shore-level image cannot establish
+  that no current is present; its source and reuse licence were not recorded.
+- For `rip current-24 example.webp`, the assistant assessed the image as
+  ambiguous, leaning negative at about 60%. It showed shore-parallel wave bands
+  across a cove with irregular foam near the rocky shoreline, without a clear
+  offshore channel or plume. The student labelled it negative, explaining that
+  there were no clear distinctive signs. Low light and the oblique view limit
+  certainty; the source and reuse licence were not recorded.
+- For `rip current-25 example.webp`, the assistant assessed the image as
+  negative at about 80% confidence. It showed shore-parallel breakers and
+  whitewater washing around exposed rocks along a shallow shoreline, without a
+  distinct narrow offshore channel, breaker gap, or concentrated offshore
+  plume. The student labelled it negative after seeing the assessment. This
+  low shoreline view cannot establish that no current is present; its source
+  and reuse licence were not recorded.
+- For `rip-current 26-example.webp`, the assistant assessed the image as
+  ambiguous, leaning negative at about 65%. It showed broad, mostly calm
+  nearshore water with shallow-looking colour bands, but no clearly defined
+  narrow channel, distinct breaker gap, or concentrated offshore plume. The
+  student labelled it negative after seeing the assessment. The darker area
+  could reflect depth, seabed, or lighting; the still image does not establish
+  flow direction. Its source and reuse licence were not recorded.
+- For `rip-current 27-example.jpg n official.jpg`, the assistant assessed the
+  image as negative at about 85% confidence. It showed an exposed rocky tidal
+  flat and shallow-looking water between rocks, without a distinct surf-zone
+  channel, breaker gap, or offshore plume. The student labelled it negative
+  after seeing the assessment. Its source and reuse licence were not verified.
+- For `rip-current 31-example.jpg n official.jpg`, the assistant assessed the
+  image as ambiguous, leaning positive at about 60% confidence. A gap in the
+  distant breaking-wave line and a darker, relatively smooth corridor toward
+  the foreground surf could be a channel-like appearance, but ordinary
+  variation in breaking waves is also possible and the still image does not
+  establish offshore flow. The student labelled it positive after seeing the
+  assessment, meeting the project's coaching pass criterion. Its source and
+  reuse licence were not verified.
+- For `rip-current 33-example.jpg n official.jpg`, the assistant assessed the
+  image as ambiguous, leaning positive at about 65% confidence. Apart from the
+  drawn arrows, a darker, relatively smooth corridor appears to cut through
+  foreground whitewater toward open water, with breaking surf on either side.
+  The arrows and Surf Life Saving logo are overlays, not independent evidence,
+  and the still image cannot confirm flow. The student labelled it positive
+  after seeing the assessment, meeting the project's coaching pass criterion.
+  Its source and reuse licence were not verified.
+- For `rip current 32.jpeg`, the assistant assessed the image as ambiguous,
+  leaning positive at about 60% confidence. A narrow gap in breaking foam just
+  left of the rock groyne and a smoother-looking corridor extending seaward
+  could be channel-like, but wave wrapping and turbulence around the structure
+  are possible lookalikes. The red arrows are annotations, not evidence, and
+  the still image cannot confirm flow. The student labelled it positive after
+  seeing the assessment, meeting the project's coaching pass criterion. Its
+  source and reuse licence were not verified.
+- For `rip-current 34-example.jpg n official.jpg`, the assistant assessed the
+ image as ambiguous, leaning negative at about 65% confidence. It showed a
+ broad low-tide beach and shallow-looking water with diagonal wave bands, but
+ no clearly defined narrow channel, distinct breaker gap, or concentrated
+ offshore plume. The darker foreground area could reflect depth or seabed;
+ the still image does not establish flow direction. The student labelled it
+ positive after seeing the assessment. Its source and reuse licence were not
+ verified.
+- For `rip-current 35-example.jpg n official.jpg`, the assistant assessed the
+ image as negative at about 80% confidence. It showed fairly continuous
+ shore-parallel breaker bands and broad surf, without a distinct narrow
+ channel, clear breaker gap, or concentrated offshore plume. The student
+ labelled it negative after seeing the assessment. A still image cannot
+ establish that no current is present; its source and reuse licence were not
+ verified.
+- For `rip current 36.png`, the assistant assessed the image as positive at
+ about 85% confidence. It showed a dark, relatively smooth channel cutting
+ through breaking surf toward open water, with breaking waves on either side.
+ The student clarified that the arrows are there to help explain the
+ rip-current flow, not to indicate a positive label by themselves. Assess the
+ visible channel and surrounding surf pattern; arrows may clarify intended
+ flow direction but are not standalone evidence. A still image cannot prove
+ flow. The student labelled it positive after seeing the assessment, meeting
+ the project's coaching pass criterion. Its source and reuse licence were not
+ verified.
+ - For `rip current 38.png`, the assistant assessed the image as ambiguous,
+   leaning positive at about 60% confidence. A darker, smoother-looking
+   corridor appears to cross the nearshore surf near the middle, with breaking
+   foam on either side. The oblique, irregular wave bands and nearby rocky
+   headland may be lookalikes; a still image cannot confirm offshore flow. The
+   student labelled it positive after seeing the assessment, meeting the
+   project's coaching pass criterion. Its source and reuse licence were not
+   verified.
+- For `rip-current 40-example.jpg n official.jpg`, the assistant assessed the
+   aerial image as positive at about 85% confidence. A dark, relatively smooth
+   corridor appears to extend from the shore through breaking surf toward open
+   water, bordered by turbulent foam and breaking waves. This suggests a
+   channel-like pattern but does not confirm water movement. The student
+   labelled it positive after seeing the assessment, meeting the project's
+   coaching pass criterion. Its source and reuse licence were not verified.
+- For `rip-current 41-example.jpg official.jpg`, the assistant assessed the
+   image as negative at about 80% confidence. It showed a broad, continuous band
+   of shoreward-breaking surf along the beach, without a distinct narrow
+   offshore channel, breaker gap, or concentrated plume. Long-exposure blur
+   limits interpretation, and a still image cannot establish that no current
+   is present. A photographer watermark is visible; source and reuse licence
+   were not verified.
+- For `rip-current 42-example.jpg official.jpg`, the assistant assessed the
+   aerial image as ambiguous, leaning positive at about 60% confidence. A
+   darker, smoother-looking corridor near the middle appears to interrupt the
+   breaking-foam bands and extend seaward, but turbulent irregular surf is a
+   possible lookalike and a still image cannot confirm offshore flow. The image
+   has a text overlay identifying Fanore Beach, Co Clare, Ireland. The student
+   labelled it negative, disagreeing with the assistant's initial assessment;
+   preserve both labels rather than treating the coaching correction as
+   independently verified ground truth. Its source and reuse licence were not
+   verified.
+- For `rip-current 43-example.jpg official.jpg`, the assistant assessed the
+   image as ambiguous, leaning negative at about 60% confidence. It is a
+   low-resolution, oblique shoreline view with a fairly continuous band of
+   breaking foam and no distinct narrow channel or clear breaker gap. Arrows
+   point to a patch of surf but do not establish water movement. The student
+   labelled it positive, disagreeing with the assistant's assessment; preserve
+   both labels as coaching data, not verified ground truth. Its source and
+   reuse licence were not verified.
+- For `rip-current-44 example.webp`, the assistant assessed the image as
+   ambiguous, leaning positive at about 70% confidence. Inside the red circle,
+   a darker, smoother-looking corridor appears to interrupt the breaking surf,
+   with foamy water along its edges and a gap in the breaking waves offshore.
+   The circle is only an annotation, and a still image cannot confirm water
+   movement. The student labelled it positive after seeing the assessment,
+   meeting the project's coaching pass criterion. Its source and reuse licence
+   were not verified.
+- For `rip-current 46-example.jpg official.jpg`, the assistant assessed the
+   image as negative at about 90% confidence. It showed a broad, calm-looking
+   beach or tidal flat at sunset, without a distinct surf-zone channel, breaker
+   gap, or offshore plume. Sunset lighting and reflections affect water
+   appearance, and the still image cannot establish whether a current is
+   present. The student labelled it negative after seeing the assessment. A
+   photographer watermark is visible; source and reuse licence were not verified.
+- For `rip-current 47-example.jpg official.jpg`, the assistant assessed the
+   image as negative at about 80% confidence. It showed a broad beach and mostly
+   continuous, shore-parallel breaking waves, without a distinct narrow channel,
+   clear breaker gap, or concentrated offshore plume. This shore-level still
+   image cannot establish whether a current is present. The student labelled it
+   negative after seeing the assessment; its source and reuse licence were not
+   verified.
+- For `rip-current 48-example.jpg official.jpg`, the assistant assessed the
+  image as ambiguous, leaning negative at about 65% confidence. It showed
+  diagonal bands of breaking waves along an oblique beach, but no clearly
+  defined narrow channel, distinct breaker gap, or concentrated offshore
+  plume. The oblique view and nearby rocky headlands may affect the pattern;
+  a still image cannot establish flow. The student labelled it positive,
+  disagreeing with the assistant's initial assessment; preserve both as
+  coaching records, not verified ground truth. Its source and reuse licence
+  were not verified.
+- For `rip-current 49-example.jpg official.jpg`, the assistant assessed the
+  image as ambiguous, leaning positive at about 65% confidence. It showed
+  possible breaks in the shore-parallel foam and darker, smoother water
+  corridors between breaking bands. The colored arrows and numbered circles
+  are annotations, not independent evidence; the rocky shoreline and oblique
+  view may affect wave patterns. A still image cannot confirm water movement.
+  The student labelled it positive after seeing the assessment, meeting the
+  project's coaching pass criterion. Its source and reuse licence were not
+  verified.
+- For `rip-current 50-example.jpg official.jpg`, the assistant assessed the
+  image as negative at about 85% confidence. It showed a reflective,
+  shallow-looking shoreline at sunset with a mostly continuous line of small
+  breakers, without a distinct narrow channel, breaker gap, or concentrated
+  offshore plume. Low light and reflections limit interpretation; a still
+  image cannot establish whether a current is present. The student labelled it
+  negative after seeing the assessment. Its source and reuse licence were not
+  verified.
+- For `rip-current 28-example.webp`, the assistant assessed the image as
+  negative at about 75% confidence. It showed a fairly continuous diagonal
+  line of breaking waves and broad whitewater along the beach, with no distinct
+  narrow seaward channel, clear breaker gap, or concentrated offshore plume.
+  The student labelled it negative after seeing the assessment. A visible
+  stock-photo watermark was present, so the image is not included in the
+  repository and should not be reused without verified permission.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
-the repository and its provenance and licence have not been verified. The
-eighth through twelfth images were attached in chat, but are not committed
-because their reuse licences have not been verified. See
+the repository and its provenance and licence have not been verified. Images
+attached in chat are not committed because their reuse permissions have not
+been verified. Image 15 also bears a visible Shutterstock watermark. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
