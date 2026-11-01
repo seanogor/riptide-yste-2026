@@ -224,10 +224,13 @@ The conversation history preserves thirty-one student-labelled examples:
 - For `rip current 36.png`, the assistant assessed the image as positive at
  about 85% confidence. It showed a dark, relatively smooth channel cutting
  through breaking surf toward open water, with breaking waves on either side.
- The directional arrows are annotations, but the channel-like gap is visible
- independently. A still image cannot prove flow. The student labelled it
- positive after seeing the assessment, meeting the project's coaching pass
- criterion. Its source and reuse licence were not verified.
+ The student clarified that the arrows are there to help explain the
+ rip-current flow, not to indicate a positive label by themselves. Assess the
+ visible channel and surrounding surf pattern; arrows may clarify intended
+ flow direction but are not standalone evidence. A still image cannot prove
+ flow. The student labelled it positive after seeing the assessment, meeting
+ the project's coaching pass criterion. Its source and reuse licence were not
+ verified.
 - For `rip-current 28-example.webp`, the assistant assessed the image as
   negative at about 75% confidence. It showed a fairly continuous diagonal
   line of breaking waves and broad whitewater along the beach, with no distinct
