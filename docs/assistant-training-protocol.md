@@ -49,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves twenty-six student-labelled examples:
+The conversation history preserves twenty-nine student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -190,6 +190,30 @@ The conversation history preserves twenty-six student-labelled examples:
   establish offshore flow. The student labelled it positive after seeing the
   assessment, meeting the project's coaching pass criterion. Its source and
   reuse licence were not verified.
+- For `rip-current 33-example.jpg n official.jpg`, the assistant assessed the
+  image as ambiguous, leaning positive at about 65% confidence. Apart from the
+  drawn arrows, a darker, relatively smooth corridor appears to cut through
+  foreground whitewater toward open water, with breaking surf on either side.
+  The arrows and Surf Life Saving logo are overlays, not independent evidence,
+  and the still image cannot confirm flow. The student labelled it positive
+  after seeing the assessment, meeting the project's coaching pass criterion.
+  Its source and reuse licence were not verified.
+- For `rip current 32.jpeg`, the assistant assessed the image as ambiguous,
+  leaning positive at about 60% confidence. A narrow gap in breaking foam just
+  left of the rock groyne and a smoother-looking corridor extending seaward
+  could be channel-like, but wave wrapping and turbulence around the structure
+  are possible lookalikes. The red arrows are annotations, not evidence, and
+  the still image cannot confirm flow. The student labelled it positive after
+  seeing the assessment, meeting the project's coaching pass criterion. Its
+  source and reuse licence were not verified.
+- For `rip-current 34-example.jpg n official.jpg`, the assistant assessed the
+ image as ambiguous, leaning negative at about 65% confidence. It showed a
+ broad low-tide beach and shallow-looking water with diagonal wave bands, but
+ no clearly defined narrow channel, distinct breaker gap, or concentrated
+ offshore plume. The darker foreground area could reflect depth or seabed;
+ the still image does not establish flow direction. The student labelled it
+ positive after seeing the assessment. Its source and reuse licence were not
+ verified.
 - For `rip-current 28-example.webp`, the assistant assessed the image as
   negative at about 75% confidence. It showed a fairly continuous diagonal
   line of breaking waves and broad whitewater along the beach, with no distinct
