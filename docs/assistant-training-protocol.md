@@ -49,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves thirty-four student-labelled examples:
+The conversation history preserves thirty-five student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -253,6 +253,16 @@ The conversation history preserves thirty-four student-labelled examples:
    limits interpretation, and a still image cannot establish that no current
    is present. A photographer watermark is visible; source and reuse licence
    were not verified.
+- For `rip-current 42-example.jpg official.jpg`, the assistant assessed the
+   aerial image as ambiguous, leaning positive at about 60% confidence. A
+   darker, smoother-looking corridor near the middle appears to interrupt the
+   breaking-foam bands and extend seaward, but turbulent irregular surf is a
+   possible lookalike and a still image cannot confirm offshore flow. The image
+   has a text overlay identifying Fanore Beach, Co Clare, Ireland. The student
+   labelled it negative, disagreeing with the assistant's initial assessment;
+   preserve both labels rather than treating the coaching correction as
+   independently verified ground truth. Its source and reuse licence were not
+   verified.
 - For `rip-current 28-example.webp`, the assistant assessed the image as
   negative at about 75% confidence. It showed a fairly continuous diagonal
   line of breaking waves and broad whitewater along the beach, with no distinct
