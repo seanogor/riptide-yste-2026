@@ -36,8 +36,9 @@ Record the assistant's uncertainty and the student's agreement separately.
 This is a coaching criterion for the exercise, not a measure of model
 performance or independent scientific validation. By this criterion, images
 13 and 14 were passes because the assistant assessed them as ambiguous,
-leaning positive, and the student confirmed them as positive. Image 16 was
-also a pass: the assistant assessed it as positive and the student agreed.
+leaning positive, and the student confirmed them as positive. Images 16, 22,
+and 23 were also passes: the assistant assessed them as positive and the
+student agreed.
 
 ## After the student gives a correction
 
@@ -48,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves sixteen student-labelled examples:
+The conversation history preserves eighteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -127,15 +128,31 @@ The conversation history preserves sixteen student-labelled examples:
   after seeing the assessment, meeting the student's coaching pass criterion.
   The source and reuse licence were not recorded, so the image is not included
   in the repository; this assessment is not independent validation.
+- For `rip-current 22-example.webp`, the assistant assessed the composite as a
+  positive illustration at about 70% confidence. Schematic panels a and c show
+  arrows indicating offshore flow; panel b contains a turbulent, foamy patch;
+  panel d shows an aerial surf line with a possible gap. The student labelled
+  it positive after seeing the assessment, meeting the coaching pass
+  criterion. Because this is a multi-panel graphic containing diagrams, it is
+  not suitable as a single raw detector-training image or one-box annotation.
+  The source and reuse licence were not recorded.
+- For `rip-current-23 example.webp`, the assistant assessed the image as
+  positive at about 70% confidence. A darker green channel appears to interrupt
+  the breaking-wave line and extend from the beach side toward offshore, with
+  foam and breaking waves on either side. The image is low resolution, so wave
+  timing, depth, and glare are possible lookalikes; a still image cannot prove
+  flow direction. The student labelled it positive after seeing the assessment,
+  meeting the coaching pass criterion. Its source and reuse licence were not
+  recorded.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
-the repository and its provenance and licence have not been verified. The
-eighth through sixteenth images were attached in chat, but are not committed
-because their reuse permissions have not been verified. Image 15 also bears a
-visible Shutterstock watermark. See
+the repository and its provenance and licence have not been verified. The original images for these examples were not recovered into this repository.
+Several later images were attached in chat; they are not committed because
+their reuse permissions have not been verified. Image 15 also bears a visible
+Shutterstock watermark. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
