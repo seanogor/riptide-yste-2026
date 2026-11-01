@@ -49,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves thirty-two student-labelled examples:
+The conversation history preserves thirty-three student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -239,6 +239,13 @@ The conversation history preserves thirty-two student-labelled examples:
    student labelled it positive after seeing the assessment, meeting the
    project's coaching pass criterion. Its source and reuse licence were not
    verified.
+- For `rip-current 40-example.jpg n official.jpg`, the assistant assessed the
+   aerial image as positive at about 85% confidence. A dark, relatively smooth
+   corridor appears to extend from the shore through breaking surf toward open
+   water, bordered by turbulent foam and breaking waves. This suggests a
+   channel-like pattern but does not confirm water movement. The student
+   labelled it positive after seeing the assessment, meeting the project's
+   coaching pass criterion. Its source and reuse licence were not verified.
 - For `rip-current 28-example.webp`, the assistant assessed the image as
   negative at about 75% confidence. It showed a fairly continuous diagonal
   line of breaking waves and broad whitewater along the beach, with no distinct
