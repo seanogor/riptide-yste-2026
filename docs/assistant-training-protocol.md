@@ -49,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves eighteen student-labelled examples:
+The conversation history preserves nineteen student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -144,15 +144,21 @@ The conversation history preserves eighteen student-labelled examples:
   flow direction. The student labelled it positive after seeing the assessment,
   meeting the coaching pass criterion. Its source and reuse licence were not
   recorded.
+- For `rip-current 20-example.jpg n official.jpg`, the assistant assessed the
+  image as ambiguous, leaning negative at about 65%. It showed a sheltered
+  cove with turquoise water and small waves but no clear narrow channel,
+  breaker gap, or offshore plume. The student labelled it negative after seeing
+  the assessment. Water colour may reflect depth, seabed, or lighting, and the
+  still image cannot establish that no current is present. The source and reuse
+  licence were not recorded.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
 were not recovered into this repository. The seventh image was identified by
 the student as `rip-current 7-example.jpg`, but its attachment remains outside
-the repository and its provenance and licence have not been verified. The original images for these examples were not recovered into this repository.
-Several later images were attached in chat; they are not committed because
-their reuse permissions have not been verified. Image 15 also bears a visible
-Shutterstock watermark. See
+the repository and its provenance and licence have not been verified. Images
+attached in chat are not committed because their reuse permissions have not
+been verified. Image 15 also bears a visible Shutterstock watermark. See
 `data/training_log.csv`; do not use it as a detector dataset, test set, or
 scientific validation evidence.
 
