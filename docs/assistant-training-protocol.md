@@ -49,7 +49,7 @@ prediction and confidence separate from that correction.
 
 ## Criteria recovered from the earlier training session
 
-The conversation history preserves nineteen student-labelled examples:
+The conversation history preserves twenty student-labelled examples:
 
 - Ordinary shoreline foam/backwash alone was corrected as negative.
 - A break in a bar, discoloured water, and visible offshore flow supported a
@@ -151,6 +151,12 @@ The conversation history preserves nineteen student-labelled examples:
   the assessment. Water colour may reflect depth, seabed, or lighting, and the
   still image cannot establish that no current is present. The source and reuse
   licence were not recorded.
+- For `rip-current 21-example.jpg n official.jpg`, the assistant assessed the
+  image as negative at about 80% confidence. It showed a large shore-parallel
+  breaking wave and broad whitewater, without a distinct narrow offshore
+  channel, breaker gap, or offshore plume. The student labelled it negative
+  after seeing the assessment. A single shore-level image cannot establish
+  that no current is present; its source and reuse licence were not recorded.
 
 These are student coaching examples, not independently verified
 oceanographic ground truth. The original images for these labelled examples
